@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="smooth-scroll-wrapper">
+        <div class="content">
+            <section>
+                <div>
+                    <img src="img-01.jpg" alt="">
+                    <h1>Boundary Supply</h1>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Ut repellendus laboriosam natus iusto neque voluptate, quam 
+                        odit deleniti rem ad saepe nulla perferendis, molestiae sed 
+                        veniam reiciendis facilis esse sunt.
+                    </p>
+                </div>
+                <div>
+                    <img src="img-02.jpg" alt="">
+                    <h1>Runway Three</h1>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Ut repellendus laboriosam natus iusto neque voluptate, quam 
+                        odit deleniti rem ad saepe nulla perferendis, molestiae sed 
+                        veniam reiciendis facilis esse sunt.
+                    </p>
+                </div>
+                <div>
+                    <img src="img-03.jpg" alt="">
+                    <h1>Waste Matters</h1>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Ut repellendus laboriosam natus iusto neque voluptate, quam 
+                        odit deleniti rem ad saepe nulla perferendis, molestiae sed 
+                        veniam reiciendis facilis esse sunt.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script>
+
+        const content = document.querySelector("section");
+        let currentPos = window.pageYOffset;
+
+        const callDistort = function() {
+            const newPos = window.pageYOffset;
+            const diff = newPos - currentPos;
+            const speed = diff * 0.35;
+
+            content.style.transform = "skewY(" + speed + "deg)";
+            currentPos = newPos;
+            requestAnimationFrame(callDistort);
+        };
+
+
+
+    </script>
+</body>
+</html>
