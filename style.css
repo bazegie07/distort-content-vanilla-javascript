@@ -8,9 +8,16 @@ html, body{
     color:  white;
 }
 
+.smooth-scroll-wrapper{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
 
 body{
-    margin: 500px auto;
+    margin: 800px auto;
 }
 
 .content{
@@ -38,10 +45,10 @@ p{
 }
 
 
-img{
+section img{
     width: 100%;
 }
 
 div{
-    margin-bottom: 80px;
+    margin: 0 0 70px 0;
 }
